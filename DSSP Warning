@@ -1,0 +1,104 @@
+```markdown
+# SFIT Protein Folding Framework
+
+**Topological Field-Coherence Modeling of Protein Folding**  
+Author: [Dr-Loo](https://github.com/Dr-Loo)  
+Companion to the paper: *Topological Field-Coherence Modeling of Protein Folding: A SFIT-Based Approach to Misfolding and Structural Prediction*
+
+---
+
+## 🔬 Overview
+
+This repository implements a lightweight and reproducible analysis pipeline for studying protein folding dynamics using the **SFIT (Spatial-Field Information Topology)** framework.
+
+We compute topological metrics such as:
+- **Writhe**: A measure of global protein twisting
+- **Φ-Field Coherence**: A proxy for structural field stability using hydrogen bonding and secondary structure content
+
+The approach is tested on **10 AlphaFold-predicted proteins** relevant to misfolding and aggregation.
+
+---
+
+## 📁 Repository Structure
+
+```
+
+Protein-Folding-Framework/
+├── data/
+│   ├── \*.pdb                 # AlphaFold protein structures
+│   └── writhe\_values.csv     # Output metrics
+├── scripts/
+│   ├── analyze\_writhe.py     # Main analysis script
+├── figures/
+│   └── metrics\_plot.png      # Writhe vs Φ plot
+└── README.md                 # This file
+
+````
+
+---
+
+## 🚀 Quickstart
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/Dr-Loo/Protein-Folding-Framework.git
+cd Protein-Folding-Framework
+````
+
+### 2. Install Python requirements
+
+```bash
+pip install pandas numpy biopython matplotlib
+```
+
+### 3. Run the analysis
+
+```bash
+python scripts/analyze_writhe.py
+```
+
+This will:
+
+* Download AlphaFold PDBs
+* Attempt writhe and Φ-coherence calculations
+* Save and plot results
+
+---
+
+## ⚠️ DSSP Warning
+
+* The `Φ-coherence` function uses **DSSP**, which requires `mkdssp` to be installed.
+* If DSSP is not available, the script will **skip Φ-coherence** and continue.
+
+To install DSSP on Unix:
+
+```bash
+rsync -a rsync://rsync.cmbi.umcn.nl/dssp ~/dssp
+export PATH="$HOME/dssp/bin:$PATH"
+```
+
+For Windows, manual setup may be required and is **optional for replication**.
+
+---
+
+## 📊 Sample Output
+
+![metrics\_plot.png](figures/metrics_plot.png)
+
+This plot shows each protein's **topological writhe vs Φ-field coherence**, highlighting aggregation-prone candidates and fold-stable references.
+
+---
+
+## 🧠 Citation
+
+If you use this repository, please cite the companion paper:
+
+> Dr-Loo (2025). *Topological Field-Coherence Modeling of Protein Folding: A SFIT-Based Approach to Misfolding and Structural Prediction.* \[DOI coming soon]
+
+---
+
+## 🤝 Contributions & Feedback
+
+Feel free to open issues or submit pull requests. For feedback, contact me via GitHub or email listed in the paper.
+
+```
