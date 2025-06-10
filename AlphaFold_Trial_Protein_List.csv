@@ -1,0 +1,11 @@
+Name,UniProt_ID,AlphaFold_PDB
+Ubiquitin,P0CG47,P0CG47.pdb
+Prion protein,P04156,P04156.pdb
+Amyloid beta precursor,P05067,P05067.pdb
+Alpha-synuclein,P37840,P37840.pdb
+Tau (MAPT),P10636,P10636.pdb
+SOD1,P00441,P00441.pdb
+Beta-2-microglobulin,P61769,P61769.pdb
+Lysozyme,P61626,P61626.pdb
+Hsp70 (HSPA1A),P0DMV8,P0DMV8.pdb
+GFP,P42212,P42212.pdb
