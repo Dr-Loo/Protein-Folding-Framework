@@ -1,0 +1,15 @@
+Protein-Folding-Framework/
+├── data/
+│   ├── 1HJM_clean.pdb          # PrP^C structure
+│   ├── PrPSc_model.pdb         # Your β-stacked model
+│   ├── Hsp70_WT.pdb            # AlphaFold model (WT)
+│   ├── Hsp70_pS631.pdb         # Modified structure with PTM
+│   └── writhe_values.csv       # TOPOY outputs
+├── figures/
+│   ├── phase_diagram.png       # W vs. Φ plot
+│   ├── hsp70_coherence.png     # WT vs pS631 visualization
+│   └── topology_cartoon.png    # PyMOL render
+├── scripts/
+│   ├── analyze_writhe.py       # Lightweight analysis
+│   └── plot_metrics.py         # Matplotlib/Pandas
+└── README.md                   # Setup + citation
